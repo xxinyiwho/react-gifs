@@ -34,17 +34,17 @@ class App extends Component {
     // ];
     return (
       <div>
-      <div className="left-scene">
-      <SearchBar />
-      <div className="selected-gif">
-      <Gif id={this.state.selectedGifId} />
+        <div className="left-scene">
+          <SearchBar searchFunction={this.search} />
+             <div className="selected-gif">
+                <Gif id={this.state.selectedGifId} />
+            </div>
+        </div>
+        <div className="right-scene">
+          <GifList gifs={this.state.gifs} />
+        </div>
       </div>
-      </div>
-      <div className="right-scene">
-      <GifList gifs={this.state.gifs} />
-      </div>
-      </div>
-      );
+    );
   }
 }
 
